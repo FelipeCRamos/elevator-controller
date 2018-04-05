@@ -11,8 +11,8 @@ Implementar o controle parcial (apenas da parte combinacional) de um elevador pa
 4. Comparar os valores dos andares atual e destino (através de um comparador) e subtraí-los (através de um subtrator) para saber por quantos andares o elevador deve funcionar. Esse valor deve ser informado em um outro display de 7 segmentos.
 
 ## Entrega
-[ ] - Relatório explicando o funcionamento do circuito através de diagramas de blocos e telas comentadas dos diagramas de forma de onda, resultantes das simulações.
-[ ] - Descrições VHDL
+- [ ] Relatório explicando o funcionamento do circuito através de diagramas de blocos e telas comentadas dos diagramas de forma de onda, resultantes das simulações.
+- [ ] Descrições VHDL
 
 ## Apresentação
 Ocorrerá no dia *18 de abril de 2018*.
