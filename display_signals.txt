@@ -1,0 +1,39 @@
+Posicionamento:
+
+	T1
+T6		T2
+	T7
+T5		T3
+	T4
+
+0: 
+1: 		T2	T3
+2: T1	T2		T4	T5		T7
+3: T1	T2	T3	T4			T7
+4: 		T2	T3			T6	T7
+5: T1		T3	T4		T6	T7
+6: T1		T3	T4	T5	T6	T7
+7: T1	T2	T3
+8: T1	T2	T3	T4	T5	T6	T7
+9: T1	T2	T3	T4		T6	T7
+
+Bytes:
+T1:			0010	0011			0101	0110	0111	1000	1001
+T2: 0001	0010	0011	0100					0111	1000	1001
+T3: 0001			0011	0100	0101	0110	0111	1000	1001
+T4: 		0010	0011			0101	0110			1000	1001
+T5: 		0010							0110			1000
+T6: 						0100	0101	0110			1000	1001
+T7: 		0010	0011	0100	0101	0110			1000	1001
+
+Byte helper:
+1: 0001 == not b1 and not b2 and not b3 and b4
+2: 0010 == not b1 and not b2 and b3 and not b4
+3: 0011 == not b1 and not b2 and b3 and b4
+4: 0100 == not b1 and b2 and not b3 and not b4
+5: 0101 == not b1 and b2 and not b3 and b4
+6: 0110 == not b1 and b2 and b3 and not b4
+7: 0111 == b1 and not b2 and not b3 and not b4
+8: 1000 == b1 and not b2 and not b3 and not b4
+
+9: 1001 == b1 and not b2 and not b3 and b4
