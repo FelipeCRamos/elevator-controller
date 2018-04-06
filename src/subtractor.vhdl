@@ -1,12 +1,14 @@
 entity subtractor is
 	port (
 		a, b: in bit;
-		s, cout: out bit
+		s, o: out bit
 	);
 end subtractor;
 
-architecture subtract of subtractor is
+architecture structure of subtractor is
 begin
+
 	s <= (a xor b);
-	cout <= (not a and b);
-end subtract;
+	o <= (not a and b);
+
+end structure;

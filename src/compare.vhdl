@@ -5,9 +5,9 @@ entity comparator is
 	);
 end comparator;
 
-architecture compare of comparator is
+architecture structural of comparator is
 begin
-	s(0) <= (a and b) or (not a and not b); -- then, its the same
+	s(0) <= (a and b) or (not a and not b); -- then, it's the same
 	s(1) <= (a and not b);
 	s(2) <= (not a and b);
-end compare;
+end structural;

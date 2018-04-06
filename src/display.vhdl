@@ -5,7 +5,7 @@ entity display is
 	);
 end display;
 
-architecture display_number of display is
+architecture structural of display is
 begin
 	t1 <= (not b1 and not b2 and b3 and not b4) or /
 		  (not b1 and not b2 and b3 and b4) or /
@@ -56,4 +56,4 @@ begin
 		  (not b1 and b2 and b3 and not b4) or /
 		  (b1 and not b2 and not b3 and not b4) or /
 		  (b1 and not b2 and not b3 and b4);
-end display_number;
+end structural;
