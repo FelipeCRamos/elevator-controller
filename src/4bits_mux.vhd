@@ -1,12 +1,12 @@
-ENTITY 4bits_mux IS
-	PORT (
+ENTITY four_bits_mux IS 
+	PORT(
 		a, b, c, d: IN BIT;
 		sel0, sel1: IN BIT;
 		s: OUT BIT
-		 );
-	END 4bits_mux;
+		);
+	END four_bits_mux;
 
-ARCHITECTURE structural OF 4bits_mux IS
+ARCHITECTURE structural OF four_bits_mux IS
 	COMPONENT mux_2x1 IS
 		PORT (
 			a, b, sel: IN BIT;

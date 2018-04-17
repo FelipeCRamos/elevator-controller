@@ -1,8 +1,8 @@
-ENTITY display IS
-	PORT (
+ENTITY display IS 
+	PORT(
 		a, b, c, d: IN BIT;
-		s0, s1, s2, s3, s4, s5, s6: OUT BIT;
-		 );
+		s0, s1, s2, s3, s4, s5, s6: OUT BIT
+		);
 	END display;
 
 ARCHITECTURE structural OF display IS

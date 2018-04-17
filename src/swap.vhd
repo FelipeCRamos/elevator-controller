@@ -1,10 +1,10 @@
-ENTITY swap IS
-	PORT (
-		a, b: IN BIT_VECTOR(3 downrto 0);
+ENTITY swap IS 
+	PORT(
+		a, b: IN BIT_VECTOR(3 downto 0);
 		sel: IN BIT;
 		s0: OUT BIT_VECTOR(3 downto 0);
 		s1: OUT BIT_VECTOR(3 downto 0)
-		 );
+		);
 	END swap;
 ARCHITECTURE behavior of swap IS
 BEGIN

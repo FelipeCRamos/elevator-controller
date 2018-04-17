@@ -1,11 +1,11 @@
-ENTITY 4bits_comparator IS
-	PORT (
+ENTITY four_bits_comparator IS 
+	PORT(
 		a, b: in BIT_VECTOR(3 downto 0);
 		s: OUT BIT_VECTOR(2 downto 0)
-		 );
-	 END 4bits_comparator;
+		);
+	 END four_bits_comparator;
 
-ARCHITECTURE structural OF 4bits_comparator IS
+ARCHITECTURE structural OF four_bits_comparator IS
 	COMPONENT comparator IS
 		PORT (
 			a, b: IN BIT;
