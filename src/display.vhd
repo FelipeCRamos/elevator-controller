@@ -1,17 +1,18 @@
 ENTITY display IS 
 	PORT(
-		a, b, c, d: IN BIT;
-		s0, s1, s2, s3, s4, s5, s6: OUT BIT
+		a: IN BIT_VECTOR(3 downto 0);
+		s: OUT BIT_VECTOR(6 downto 0)
 		);
 	END display;
 
 ARCHITECTURE structural OF display IS
+
 BEGIN
-	s0 <= c OR a  OR (NOT b AND NOT d) OR (b AND d);
-	s1 <= NOT b OR (NOT c AND NOT d) OR (c AND d);
-	s2 <= NOT c OR d OR b;
-	s3 <= a OR (NOT b AND NOT d) OR (NOT b AND c) OR (c AND NOT d) OR (b AND NOT c AND d);
-	s4 <= (NOT b AND NOT d) OR (c AND NOT d);
-	s5 <= a OR (NOT c AND NOT d) OR (b AND NOT c) OR (b AND NOT d);
-	s6 <= a OR (NOT b AND c) OR (c AND NOT d) OR (b AND NOT c);
+	s(0) <= a(2) OR a(0) OR (NOT a(1) AND NOT a(3)) OR (a(1) AND a(3));
+	s(1) <= NOT a(1) OR (NOT a(2) AND NOT a(3)) OR (a(2) AND a(3));
+	s(2) <= NOT a(2) OR a(3) OR a(1);
+	s(3) <= a(0) OR (NOT a(1) AND NOT a(3)) OR (NOT a(1) AND a(2)) OR (a(2) AND NOT a(3)) OR (a(1) AND NOT a(2) AND a(3));
+	s(4) <= (NOT a(1) AND NOT a(3)) OR (a(2) AND NOT a(3));
+	s(5) <= a(0) OR (NOT a(2) AND NOT a(3)) OR (a(1) AND NOT a(2)) OR (a(1) AND NOT a(3));
+	s(6) <= a(0) OR (NOT a(1) AND a(2)) OR (a(2) AND NOT a(3)) OR (a(1) AND NOT a(2));
 END structural;
