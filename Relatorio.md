@@ -56,6 +56,7 @@ Lista de componentes utilizados e devidamente programados para cumprir com as re
 
   5. Depois de se movimentar até o andar, checar se é o andar escolhido pelo usuário e abrir a porta (não implementado nesse projeto, comentado para fins ilustrativos).
 
-     ​
 
+### Screenshots do programa
 
+As screenshots podem ser encontradas no `./images/`.
