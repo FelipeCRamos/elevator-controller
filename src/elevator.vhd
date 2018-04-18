@@ -4,9 +4,10 @@
 
 ENTITY elevator IS 
 	PORT(
-		a: 	IN BIT_VECTOR(8 downto 0);
+		a: 	IN BIT_VECTOR(9 downto 0);
 		floor: 	IN BIT_VECTOR(3 downto 0);
-		s1, s2: OUT BIT_VECTOR(6 downto 0)
+		s1: OUT BIT_VECTOR(6 downto 0);
+		s2: OUT BIT_VECTOR(6 downto 0)
 		 );
 	END elevator;
 
@@ -54,9 +55,8 @@ ARCHITECTURE structural OF elevator IS
 	END COMPONENT;
 	-- END OF COMPONENTS AREA
 
-	SIGNAL ic: BIT_VECTOR(8 downto 0);
 	SIGNAL ic: BIT_VECTOR (8 downto 0);
-	SIGNAL cd: BIT_VECTOR (6 downto 0);
+	SIGNAL cd: BIT_VECTOR (3 downto 0);
 	SIGNAL do: BIT_VECTOR (6 downto 0);
 	--Signal coder - destino // entrada - andar atual // comparador - subtrator
 	SIGNAL cdes: BIT_VECTOR (3 downto 0);
@@ -80,9 +80,9 @@ ARCHITECTURE structural OF elevator IS
 
 
 BEGIN
-	-- u1: coder4bits PORT MAP ();
-	-- u2: display PORT MAP ();
-	u3: four_bits_comparator PORT MAP( eaSUB, ebSUB, sCOMP);
+	u1: coder PORT MAP (a, cd);
+	u2: display PORT MAP (cd, s2);
+	u3: four_bits_comparator PORT MAP( eaSUB, ebSUB, sCOMP );
 	u4: swap PORT MAP(eaSUB, ebSUB, sCOMP(0), s0TROCADOR, s1TROCADOR);
 	u5: subtrator4bits PORT MAP(s0TROCADOR, s1TROCADOR, sSUB);
 	u6: display PORT MAP (sSUB, sSUB_display);
